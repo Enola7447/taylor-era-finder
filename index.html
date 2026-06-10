@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Swift Era Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>✨ Taylor Swift Era Finder ✨</h1>
+            <p>Discover which Taylor Swift era matches your vibe!</p>
+        </header>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="card">
+            <form id="era-quiz">
+                <!-- Question 1: Mood -->
+                <div class="question">
+                    <label for="mood">What is your current mood?</label>
+                    <select id="mood" required>
+                        <option value="">Select your mood...</option>
+                        <option value="happy">😊 Happy</option>
+                        <option value="sad">😢 Sad</option>
+                        <option value="romantic">💕 Romantic</option>
+                        <option value="confident">💪 Confident</option>
+                        <option value="nostalgic">🌅 Nostalgic</option>
+                    </select>
+                </div>
+
+                <!-- Question 2: Color -->
+                <div class="question">
+                    <label for="color">Pick a favorite color:</label>
+                    <select id="color" required>
+                        <option value="">Select a color...</option>
+                        <option value="gold">🌟 Gold</option>
+                        <option value="red">❤️ Red</option>
+                        <option value="blue">💙 Blue</option>
+                        <option value="green">💚 Green</option>
+                        <option value="purple">💜 Purple</option>
+                    </select>
+                </div>
+
+                <!-- Question 3: Season -->
+                <div class="question">
+                    <label for="season">Pick a season:</label>
+                    <select id="season" required>
+                        <option value="">Select a season...</option>
+                        <option value="spring">🌸 Spring</option>
+                        <option value="summer">☀️ Summer</option>
+                        <option value="fall">🍂 Fall</option>
+                        <option value="winter">❄️ Winter</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Find My Era!</button>
+            </form>
+        </div>
+
+        <!-- Results Section (Hidden by default) -->
+        <div id="result-section" class="card hidden">
+            <div class="result-content">
+                <h2 id="era-name"></h2>
+                <p id="era-description"></p>
+                
+                <div class="songs-section">
+                    <h3>🎵 Recommended Songs:</h3>
+                    <ul id="song-list"></ul>
+                </div>
+
+                <button id="try-again" class="btn btn-secondary">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* ========================================
+   CSS Variables for easy customization
+======================================== */
+:root {
+    --primary-color: #9b59b6;
+    --secondary-color: #e74c3c;
+    --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-background: rgba(255, 255, 255, 0.95);
+    --text-color: #333;
+    --text-light: #666;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --border-radius: 20px;
+}
+
+/* ========================================
+   Reset and Base Styles
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ========================================
+   Container
+======================================== */
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ========================================
+   Header Styles
+======================================== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   Card Styles
+======================================== */
+.card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ========================================
+   Form and Question Styles
+======================================== */
+.question {
+    margin-bottom: 25px;
+}
+
+.question label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.question select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='[w3.org](http://www.w3.org/2000/svg)' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.question select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
+}
+
+.question select:hover {
+    border-color: var(--primary-color);
+}
+
+/* ========================================
+   Button Styles
+======================================== */
+.btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+    color: white;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.5);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    margin-top: 25px;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+/* ========================================
+   Result Section Styles
+======================================== */
+.result-content {
+    text-align: center;
+}
+
+#era-name {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#era-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.songs-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.songs-section h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#song-list {
+    list-style: none;
+}
+
+#song-list li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+#song-list li:last-child {
+    margin-bottom: 0;
+}
+
+#song-list li:hover {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   Utility Classes
+======================================== */
+.hidden {
+    display: none;
+}
+
+/* ========================================
+   Animations
+======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    #era-name {
+        font-size: 1.6rem;
+    }
+}
